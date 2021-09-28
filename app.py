@@ -15,9 +15,7 @@ print(a)
 def homepage():
     return render_template('index.html', y=x)
 
-if __name__ == "__main__":
-    from waitress import serve
-    serve(application, host="127.0.0.1", port=5000)
+
 
 application.run()
 
