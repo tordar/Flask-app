@@ -1,25 +1,23 @@
 import numpy as np
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 
 
-
-x = 'Hello world, from flask'
-
-print('Hello from python')
-
-a=np.zeros(4)
-print(a)
+application = Flask(__name__)
 
 
-def create_app():
-    application = Flask(__name__)
-    @application.route('/')
-    def homepage():
-        return render_template('index.html', y=x)
+random_decimal = np.random.rand()
+@application.route('/update', methods=['POST'])
+def update():
+    random_decimal = np.random.rand()
+    return jsonify('', render_template('random_decimal_model.html', x=random_decimal))
 
-    return application
+@application.route('/')
+def homepage():
+    return render_template('index.html', x=random_decimal)
+
+application.run()
 
 
-if __name__ == "__main__":
-    application = create_app()
-    application.run(host='0.0.0.0', debug=True)
+# if __name__ == "__main__":
+#     application = create_app()
+#     application.run(host='0.0.0.0', debug=True)
