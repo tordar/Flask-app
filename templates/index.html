@@ -17,19 +17,18 @@
                 console.log('loaded')
             }, 1000)
         
-    const loadNewNum = () => {
-        $.ajax({
-            url: '/update',
-            type: 'POST',
-            dataType: 'json',
-            success: function(data){
-                $(random_decimal).replaceWith(data)
-            }
-        })
-    }
-})
-    
-</script>
+        const loadNewNum = () => {
+            $.ajax({
+                url: '/update',
+                type: 'POST',
+                dataType: 'json',
+                success: function(data){
+                    $(random_decimal).replaceWith(data)
+                }
+            })
+        }
+    })   
+    </script>
 <div id="random_decimal">{{x}}</div>
     
     <button id="btn">Hey</button>
