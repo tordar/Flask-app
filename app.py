@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib.pyplot
 from flask import Flask, render_template
 
 application = Flask(__name__)
