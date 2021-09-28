@@ -9,6 +9,7 @@ enum34==1.1.6
 Flask==1.1.4
 future==0.17.1
 ipaddress==1.0.22
+gunicorn==20.1.0
 itsdangerous==1.1.0
 Jinja2==2.11.3
 macholib==1.5.1
